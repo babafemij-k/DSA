@@ -7,14 +7,14 @@ import {
 
 describe("Annalyn's infiltration", () => {
   describe("can execute fast attack", () => {
-    xtest("when the knight is awake", () => {
+    test("when the knight is awake", () => {
       const knightIsAwake = true;
       const expected = false;
 
       expect(canExecuteFastAttack(knightIsAwake)).toBe(expected);
     });
 
-    xtest("when the knight is asleep", () => {
+    test("when the knight is asleep", () => {
       const knightIsAwake = false;
       const expected = true;
 
@@ -23,7 +23,7 @@ describe("Annalyn's infiltration", () => {
   });
 
   describe("can spy", () => {
-    xtest("when everyone is asleep", () => {
+    test("when everyone is asleep", () => {
       const knightIsAwake = false;
       const archerIsAwake = false;
       const prisonerIsAwake = false;
@@ -34,7 +34,7 @@ describe("Annalyn's infiltration", () => {
       );
     });
 
-    xtest("when only the prisoner is awake", () => {
+    test("when only the prisoner is awake", () => {
       const knightIsAwake = false;
       const archerIsAwake = false;
       const prisonerIsAwake = true;
@@ -45,7 +45,7 @@ describe("Annalyn's infiltration", () => {
       );
     });
 
-    xtest("when only the archer is awake", () => {
+    test("when only the archer is awake", () => {
       const knightIsAwake = false;
       const archerIsAwake = true;
       const prisonerIsAwake = false;
@@ -56,7 +56,7 @@ describe("Annalyn's infiltration", () => {
       );
     });
 
-    xtest("when only the knight is asleep", () => {
+    test("when only the knight is asleep", () => {
       const knightIsAwake = false;
       const archerIsAwake = true;
       const prisonerIsAwake = true;
@@ -67,7 +67,7 @@ describe("Annalyn's infiltration", () => {
       );
     });
 
-    xtest("when only the knight is awake", () => {
+    test("when only the knight is awake", () => {
       const knightIsAwake = true;
       const archerIsAwake = false;
       const prisonerIsAwake = false;
@@ -78,7 +78,7 @@ describe("Annalyn's infiltration", () => {
       );
     });
 
-    xtest("when only the archer is asleep", () => {
+    test("when only the archer is asleep", () => {
       const knightIsAwake = true;
       const archerIsAwake = false;
       const prisonerIsAwake = true;
@@ -89,7 +89,7 @@ describe("Annalyn's infiltration", () => {
       );
     });
 
-    xtest("when everyone is awake", () => {
+    test("when everyone is awake", () => {
       const knightIsAwake = true;
       const archerIsAwake = true;
       const prisonerIsAwake = true;
@@ -102,7 +102,7 @@ describe("Annalyn's infiltration", () => {
   });
 
   describe("can signal prisoner", () => {
-    xtest("when everyone is asleep", () => {
+    test("when everyone is asleep", () => {
       const archerIsAwake = false;
       const prisonerIsAwake = false;
       const expected = false;
@@ -110,7 +110,7 @@ describe("Annalyn's infiltration", () => {
       expect(canSignalPrisoner(archerIsAwake, prisonerIsAwake)).toBe(expected);
     });
 
-    xtest("when only the prisoner is awake", () => {
+    test("when only the prisoner is awake", () => {
       const archerIsAwake = false;
       const prisonerIsAwake = true;
       const expected = true;
@@ -118,7 +118,7 @@ describe("Annalyn's infiltration", () => {
       expect(canSignalPrisoner(archerIsAwake, prisonerIsAwake)).toBe(expected);
     });
 
-    xtest("when only the archer is awake", () => {
+    test("when only the archer is awake", () => {
       const archerIsAwake = true;
       const prisonerIsAwake = false;
       const expected = false;
@@ -126,7 +126,7 @@ describe("Annalyn's infiltration", () => {
       expect(canSignalPrisoner(archerIsAwake, prisonerIsAwake)).toBe(expected);
     });
 
-    xtest("when everyone is awake", () => {
+    test("when everyone is awake", () => {
       const archerIsAwake = true;
       const prisonerIsAwake = true;
       const expected = false;
